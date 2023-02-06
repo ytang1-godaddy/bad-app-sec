@@ -1,0 +1,25 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: 3298ddab3c13dd77d6ce1fc0baf97691430d84b0 # frozen: v4.3.0
+    hooks:
+      - id: trailing-whitespace
+        args: [--markdown-linebreak-ext=md]
+      - id: end-of-file-fixer
+      - id: check-json
+      - id: check-xml
+      - id: check-toml
+      - id: check-yaml
+        args: ["--unsafe"] # needed so it does not block Sceptre/CFN YAML files (we check these later)
+      - id: detect-private-key
+      - id: forbid-new-submodules
+      - id: mixed-line-ending
+      - id: check-added-large-files
+      - id: check-symlinks
+      - id: check-merge-conflict
+      - id: fix-byte-order-marker
+      - id: check-executables-have-shebangs
+      - id: check-shebang-scripts-are-executable
+  - repo: https://github.com/godaddy/tartufo
+    rev: 540d9b2a184db4e6c2e273973ecacbbf40f593d4 # frozen: v4.0.0
+    hooks:
+      - id: tartufo
