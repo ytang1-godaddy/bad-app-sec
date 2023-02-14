@@ -1,0 +1,17 @@
+[tool.tartufo]
+repo-path = "."
+regex = true
+entropy = true
+
+exclude-path-patterns = [
+    {path-pattern = 'tartufo.toml', reason='Exclude tartufo config'},
+    {path-pattern = '.pre-commit-config.yaml', reason='Exclude pre commit config'},
+    
+]
+exclude-signatures = [
+    {signature = '62f22e4500140a6ed959a6143c52b0e81c74e7491081292fce733de4ec574542', reason=''},
+
+]
+exclude-entropy-patterns = [
+    {pattern = 'https://my.atlassian.net/wiki/space/.*', reason = "documentation url"},
+]

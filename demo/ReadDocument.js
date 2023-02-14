@@ -27,5 +27,5 @@ app.post("/checkPermission", async (request, response) => {
 });
 
 app.listen(3000, () => {
-  console.log("schoi API listening on port 3000");
+  console.log("My API listening on port 3000");
 });
